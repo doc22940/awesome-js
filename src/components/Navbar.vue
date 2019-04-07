@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div class="posRel">
+    <div class="posRel slide-in-bck-center">
       <div class="posAbs"></div>
       <img class="mainLogo" src="../assets/main.png" alt>
     </div>
@@ -22,6 +22,36 @@ section {
 .posRel {
   position: relative;
 }
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+    transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-bck-center {
+  -webkit-animation: slide-in-bck-center 2.7s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bck-center 2.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
 
 .posAbs {
   position: absolute;
@@ -30,12 +60,14 @@ section {
   transform: translate(-50%, -50%);
   height: 250px;
   width: 250px;
-  border-radius: 50%;
-  background: linear-gradient(-45deg, #6a9cfc, #4370ba, #476089, #476089, #424a59);
-  background-size: 400% 400%;
+  background-size: cover;
+  /* border-radius: 50%; */
+  background-image: url("../assets/moon.png");
+  /* background: linear-gradient(-45deg, #6a9cfc, #4370ba, #476089, #476089, #424a59); */
+  /* background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite; */
 }
 
 @-webkit-keyframes Gradient {
@@ -77,7 +109,10 @@ section {
 .title {
   font-size: 3.5rem;
   margin-bottom: 2.5rem !important;
-  color: #616060;
+  color: #fff;
+}
+.subtitle {
+  color: #adadad;
 }
 
 .mainLogo {

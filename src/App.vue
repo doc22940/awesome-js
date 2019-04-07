@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Stars></Stars>
     <Navbar/>
     <section class="container">
       <cards></cards>
@@ -10,12 +11,14 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import Cards from "./components/Cards.vue";
+import Stars from "./components/Stars.vue";
 
 export default {
   name: "app",
   components: {
     Navbar,
-    Cards
+    Cards,
+    Stars
   }
 };
 </script>
@@ -24,7 +27,8 @@ export default {
 body {
   height: 100%;
   /* background-image: url(./assets/geometry.png); */
-  background-color: #f2f9ff;
+  /* background-color: #f2f9ff; */
+  background: -webkit-radial-gradient(center, ellipse cover, #27364f 0%, #112 50%, #112 100%);
 }
 
 #app {
