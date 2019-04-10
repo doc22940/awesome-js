@@ -28,7 +28,28 @@ body {
   height: 100%;
   /* background-image: url(./assets/geometry.png); */
   /* background-color: #f2f9ff; */
-  background: -webkit-radial-gradient(center, ellipse cover, #27364f 0%, #112 50%, #112 100%);
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #27364f 0%,
+    #112 50%,
+    #112 100%
+  );
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
 }
 
 #app {
